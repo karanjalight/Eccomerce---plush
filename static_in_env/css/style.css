@@ -1,0 +1,511 @@
+/* Required height of parents of the Half Page Carousel for proper displaying carousel itself */
+html,
+body{
+  background-color: rgba(235, 233, 233, 0.904);
+  height: 1500px;
+  margin-bottom: 500px;
+}
+
+a {
+  color: #444 !important;
+}
+
+/* Half Page Carousel itself*/
+.carousel {
+  height: 50%; }
+  .carousel .carousel-inner {
+    height: 100%; }
+    .carousel .carousel-inner .carousel-item,
+    .carousel .carousel-inner .active {
+      height: 100%; }
+
+@media screen and (min-width: 1200px){
+  .new{
+    margin: 100px 100px;
+  }
+  .landing-page{
+    height: 600px;
+      background-image: url('https://wallpapercave.com/wp/wp2004258.jpg');
+      background-position: 1520px ;
+      background-size: cover cover;
+      background-position: center;    
+  }
+  .overlayer {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 600px;
+  }
+  .headTitle {
+    padding: 170px 30px;
+  }
+  a {
+    text-decoration: none;
+    color: var(--bs-gray-700);
+  }  
+  .headTitle h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+    font-family: sans-serif;
+  }  
+  .headTitle p {
+    color: white;
+    text-align: center;
+  }
+  .headTitle button {
+    width: 180px;
+    background-color: #974cc2;
+    padding: 10px 20px 10px 20px;
+    border: 0px solid navajowhite;
+    border-radius: 6px;
+    color: white;
+    margin-top: 20px;
+
+  }
+  .headTitle button:hover {
+    width: 180px;
+    background-color: #e97de9;
+    box-shadow: 2px 2px 2px 2px #e97de9;
+    padding: 10px 20px 10px 20px;
+    border: 0px solid navajowhite;
+    border-radius: 6px;
+    color: white;
+    margin-top: 20px;
+
+  }
+  /*============================ The landing Page is done ======================= */
+
+  .titles {
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
+    margin: 5px;
+  }
+  .titles .view-all{
+    margin-top: 20px;
+    color: rgb(202, 19, 215);
+    font-weight: 500;
+    padding: 5px;
+  }
+
+  .titles .view-all:hover{
+    margin-top: 20px;
+    background-color: rgb(224, 120, 232);
+    color: #fff;
+    font-weight: 500;
+    padding: 5px;
+    border-radius: 12px;
+  }
+
+  .categories{
+    display: flex;
+    flex:auto;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 100px;
+    flex-direction: row;
+    flex: 1;
+    background-color: gainsboro;
+    margin: 50px;
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .category{
+    display: flex;
+    flex: 1;
+    gap: 0.1rem;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    padding-left: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: #444;
+  }
+
+  /* ===============new arrival */
+  .new-arrivals{
+    margin-bottom: 20px;
+    height: 400px;
+    display: flex;
+    overflow-x: scroll;
+    gap: 1rem;
+
+  }
+
+  .new-arrivals > * {
+    flex: 1 1 0;
+  }
+  
+  /* Card */
+  .product{
+    background-color: #fff;
+    width: 300px;
+    border-radius: 12px;
+    margin: 10px;
+    height: 350px;
+    width: max-content;
+  }
+  .product img{
+    height: 200px;
+    border-radius: 12px 12px 0px 0px;
+    object-fit: cover; 
+    width: 300px;     
+  }
+  .product .card-detail{
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+  .product .card-detail h4 {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 3px;
+  }
+  .product .card-detail h4 span {
+    font-size: 13px;
+    padding: 5px;
+    background-color: #974cc2;
+    color: #fff;
+    border-radius: 12px;
+    
+  }
+  .product .card-detail p {
+    margin-bottom: 4px !important;
+    font-size: 17px;
+    font-weight: 400px;
+  }
+  .product .card-detail .discount{
+    text-decoration: line-through;
+  }
+
+  .best-selling{
+    height: 200px;
+    display: none;
+    
+  }
+  .best-sell {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin: 10px;
+    background-color: white;
+    padding: 5px;
+    height: 100px;      
+    border-radius: 12px;
+    box-shadow: 4px 4px rgb(186, 186, 186);
+  }
+  .best-sell img{
+    width: 100px;
+    height: 80px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-right: 100px;
+
+  }
+
+  .best-sell span{
+    font-size: 13px;
+    padding: 5px;
+    background-color: #974cc2;
+    color: #fff;
+    border-radius: 12px;
+    letter-spacing: 3px;
+    margin-left: 5px;
+  }
+
+  .best-sell p {
+    margin: 0px;
+    margin-bottom: 4px;
+  }
+
+  .best-sell h5 {
+    margin: 4px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-weight: 500;
+  }
+
+  .foot{
+    height: 100px;
+    background-color: #974cc2;
+  }
+  
+
+}
+
+
+/* Medium screens like tablets and small screen laptops */
+@media screen and (max-width: 1200px){
+  
+  .landing-page{
+    height: 600px;
+      background-image: url('https://wallpapercave.com/wp/wp2004258.jpg');
+      background-position: 500px ;
+      background-size: cover;
+      background-position: center;
+  }
+  .overlayer {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 600px;
+    }
+  .headTitle {
+    padding: 200px 30px;
+    }    
+  .headTitle h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+    }    
+    .headTitle p {
+      color: white;
+      text-align: center;
+    }
+    .headTitle button {
+      width: 180px;
+      background-color: plum;
+      padding: 10px 20px 10px 20px;
+      border: 0px solid navajowhite;
+      border-radius: 6px;
+      color: white;
+      margin-top: 20px;
+  
+    }  
+    .headTitle button:hover {
+      width: 180px;
+      background-color: #e97de9;
+      box-shadow: 2px 2px 2px 2px #e97de9;
+      padding: 10px 20px 10px 20px;
+      border: 0px solid navajowhite;
+      border-radius: 6px;
+      color: white;
+      margin-top: 20px;
+  
+    }
+    /* ===================Landing page complete ================== */
+
+}    
+/* Adjustment for mobile devices*/
+@media (max-width: 776px) {
+  .landing-page{
+    height: 600px;
+      background-image: url('https://wallpapercave.com/wp/wp2004258.jpg');
+      background-position: 500px ;
+      background-size: cover;
+  }
+  .overlayer {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 600px;
+    }
+  .headTitle {
+    padding: 175px 30px;
+    }    
+  .headTitle h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+    }    
+    .headTitle p {
+      color: white;
+      text-align: center;
+    }
+    .headTitle button {
+      width: 180px;
+      background-color: #974cc2;
+      padding: 10px 20px 10px 20px;
+      border: 0px solid navajowhite;
+      border-radius: 6px;
+      color: white;
+      margin-top: 20px;
+  
+    }  
+    .headTitle button:hover {
+      width: 180px;
+      background-color: #e97de9;
+      box-shadow: 2px 2px 2px 2px #e97de9;
+      padding: 10px 20px 10px 20px;
+      border: 0px solid navajowhite;
+      border-radius: 6px;
+      color: white;
+      margin-top: 20px;
+  
+    }
+    /* ===================Landing page complete ================== */
+
+    /* ======================categories ============= */
+    h2{
+     
+      margin-top: 10px;
+      
+      font-size: 30px;
+      letter-spacing: 2px;
+      font-weight: 300;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .titles {
+      display: flex;
+      justify-content:space-between;
+      flex-direction: row;
+      margin: 5px;
+    }
+    .titles .view-all{
+      margin-top: 20px;
+      color: rgb(202, 19, 215);
+      font-weight: 500;
+    }
+   
+    .categories{
+      display: flex;           
+      gap: 1rem;
+      flex-direction: row;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      height: 100px;
+      margin:5px;
+      border-radius: 12px;
+      padding: 20px;
+      overflow-x: scroll;
+    }
+    .categories :first-child{      
+      width: max-content;
+    }
+    .categories > * {
+      flex: 1 1 0;
+    }
+    .category{
+      display: flex;      
+      gap: 0.1rem;      
+      background-image: url('https://wallpapercave.com/wp/wp2004258.jpg') ;
+      border-radius: 12px;
+      padding: 10px;
+      padding-left: 30px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 500;
+      color: #444;
+      width: max-content;
+    }
+    /* ======================categories ============= */
+
+    /* ===============new arrival */
+    .new-arrivals{
+      margin-bottom: 40px;
+      height: 400px;
+      display: flex;
+      overflow-x: scroll;
+      gap: 1rem;
+
+    }
+
+    .new-arrivals > * {
+      flex: 1 1 0;
+    }
+    
+    /* Card */
+    .product{
+      background-color: #fff;
+      width: 300px;
+      border-radius: 12px;
+      margin: 10px;
+      height: 350px;
+      width: max-content;
+    }
+    .product img{
+      height: 200px;
+      border-radius: 12px 12px 0px 0px;
+      object-fit: cover; 
+      width: 300px;     
+    }
+    .product .card-detail{
+      padding: 20px;
+      margin-bottom: 10px;
+    }
+    .product .card-detail h4 {
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 3px;
+    }
+    .product .card-detail h4 span {
+      font-size: 13px;
+      padding: 5px;
+      background-color: #974cc2;
+      color: #fff;
+      border-radius: 12px;
+      
+    }
+    .product .card-detail p {
+      margin-bottom: 4px !important;
+      font-size: 17px;
+      font-weight: 400px;
+    }
+    .product .card-detail .discount{
+      text-decoration: line-through;
+    }
+
+    .best-selling{
+      height: 200px;
+    }
+    .best-sell {
+      display: flex;
+      justify-content: flex-start;
+      gap: 2rem;
+      margin: 10px;
+      background-color: white;
+      padding: 5px;
+      height: 100px;      
+      border-radius: 12px;
+      box-shadow: 4px 4px rgb(186, 186, 186);
+    }
+    .best-sell img{
+      width: 100px;
+      height: 80px;
+      border-radius: 12px;
+      object-fit: cover;
+
+    }
+
+    .best-sell span{
+      font-size: 13px;
+      padding: 5px;
+      background-color: #974cc2;
+      color: #fff;
+      border-radius: 12px;
+      letter-spacing: 3px;
+      margin-left: 5px;
+    }
+
+    .best-sell p {
+      margin: 0px;
+      margin-bottom: 4px;
+    }
+
+    .best-sell h5 {
+      margin: 4px;
+      font-size: 20px;
+      margin-bottom: 5px;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+
+    .foot{
+      height: 100px;
+      background-color: #974cc2;
+    }
+    .faqs{
+      padding: 500px;
+      background-color: red;
+    }
+
+  }
+
+/* Footer color for sake of consistency with Navbar */
+.page-footer {
+  background-color: #974cc2; }
+
+
+

@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <main>
+    <div >
+      <!-- landing-page -->
+      <div class="landing-page">
+        <div class="overlayer">
+          <div class="headTitle">
+            <h1> Plush Hair Kenya</h1>
+            <p>Shopping made easy for you!</p>
+            <p style="text-align: center;"> 
+                <a href="#category">
+                    <button> <span><i class="bi bi-cart2"></i></span> Shop Now</button>
+                </a>
+            </p>
+          </div>
+        <div>
+      </div>      
+      <br>      
+      <div class="container" id="category">
+         <!--Navbar-->
+
+         {% include "categoryComponent.html" %}
+
+      
+        <!--/.Navbar-->
+      </div>
+      
+      <!-- new arrivals-->
+      <div class="mb-4 new fadeIn" >
+        <div class="titles">
+          <div><h2> New Arrivals </h2></div>
+          <div class="view-all">View All > </div>
+        </div>
+        <div class="new-arrivals" id="newarrival">
+          {% for item in object_list %}
+          
+          <div class="product">
+            <a href="{{ item.get_absolute_url }}">
+            <div>
+              <img src="{{ item.image.url }}" class="card-img-top">
+            </div>
+            <!-- Card details-->
+            <div class="card-detail">
+              <h4> {{ item.title }} <span > sale </span> </h4>
+              {% if item.discount_price %}
+              <p> <i class="bi bi-star"></i> &nbsp Kes  {{ item.discount_price }} </p>
+              <p class="discount"> Kes {{item.price}} </p>  
+              {% else  %}    
+              <p> <i class="bi bi-star"></i> &nbsp Kes {{item.price}} </p>
+              {% endif %}      
+            </div>
+          </a>
+          </div>
+       
+          {% endfor %}
+          
+        </div>
+      </div>
+
+      <!-- Popular products-->
+       <!-- new arrivals-->
+       <div class="mb-4 new fadeIn">
+        <div class="titles">
+          <div><h2> Popular Products </h2></div>
+          <div class="view-all">View All > </div>
+        </div>
+        <div class="new-arrivals" id="newarrival">
+          {% for item in object_list %}
+          
+          <div class="product">
+            <a href="{{ item.get_absolute_url }}">
+            <div>
+              <img src="{{ item.image.url }}" class="card-img-top">
+            </div>
+            <!-- Card details-->
+            <div class="card-detail">
+              <h4> {{ item.title }} <span > sale </span> </h4>
+              {% if item.discount_price %}
+              <p> <i class="bi bi-star"></i> &nbsp Kes  {{ item.discount_price }} </p>
+              <p class="discount"> Kes {{item.price}} </p>  
+              {% else  %}    
+              <p> <i class="bi bi-star"></i> &nbsp Kes {{item.price}} </p>
+              {% endif %}      
+            </div>
+          </a>
+          </div>
+       
+          {% endfor %}
+          
+        </div>
+      </div>
+
+      
+      <!--  best-selling -->
+      <div class="best-sellin new fadeIn">
+        <div class="titles">
+          <div><h2> Best Selling </h2></div>
+          <div class="view-all">View All > </div>
+        </div>
+        <div class="product-list">
+          
+          {% for item in object_list %}
+          
+            <div class="best-sell">
+              <div>
+                
+                <img src="{{ item.image.url }}" >
+              </div>
+              <a href="{{ item.get_absolute_url }}">
+                <div>
+                  <h5> {{ item.title }} <span > sale </span> </h5>
+
+                  {% if item.discount_price %}
+                  <p> <i class="bi bi-star"></i> &nbsp Kes {{ item.discount_price }} </p>
+                  <p class="discount" style="text-decoration: line-through;"> Kes  {{item.price}} </p>
+                  {% else  %}
+                  <p> <i class="bi bi-star"></i> &nbsp Kes  {{item.price}} </p>
+                  {% endif %} 
+
+                </div>
+              </a>
+              
+            </div>
+          {% endfor %}
+          </div>
+        </div>
+        <br><br>
+        <br>        {% include "footer.html" %}
+      </div>
+      
+    </div> 
+
+  </main>
+
+  
+  
+
+{% endblock content %}
+
+

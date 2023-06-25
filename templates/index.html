@@ -1,0 +1,19 @@
+<br>
+<br>
+<br>
+<br>
+        {% for category in category  %}
+
+        <li class="link"> {{ category.name }} </a></li>
+       slug--- {{category.slug}}
+
+       <a href="{% url 'categoryview' %}"> {{ category.name }} </a>
+        
+        {% endfor %}
+
+        {% for item in item %}
+            {{ item.title }}
+        {% endfor %}
+
+        
+</div>
