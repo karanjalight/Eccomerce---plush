@@ -2,12 +2,74 @@
 
 {% block content %}
   <main>
-    
-       <div class="mb-4 new fadeIn" style="background-color: white; padding: 50px; border-radius:15px" >
+    <br>
+       <div class="mb-4 new fadeIn" style="background-color: white; padding-top: 50px; border-radius:15px" >
         <div class="titles">
 
-          <div><h2 >  Products ({{ category_name.name }})  </h2></div>
+          {% comment %} <div><h2 style="text-align: center">   {{ category_name.name }}  </h2></div> {% endcomment %}
           
+        </div>
+        <div class="titles">
+          <div><h2> All ({{ category_name.name }} )</h2></div>
+          <div class="view-all"> </div>
+        </div>
+        <div class="new-arrivals" id="newarrival">
+          {% for item in products %}
+          
+          <div class="product">
+            <a href="{{ item.get_absolute_url }}">
+            <div>
+              <img src="{{ item.image.url }}" class="card-img-top">
+            </div>
+            <!-- Card details-->
+            <div class="card-detail">
+              <h4> {{ item.title }} <span > sale </span> </h4>
+              {% if item.discount_price %}
+              <p> <i class="bi bi-star"></i> &nbsp Kes  {{ item.discount_price }} </p>
+              <p class="discount"> Kes {{item.price}} </p>  
+              {% else  %}    
+              <p> <i class="bi bi-star"></i> &nbsp Kes {{item.price}} </p>
+              {% endif %}      
+            </div>
+          </a>
+          </div>
+       
+          {% endfor %}
+          
+        </div>
+
+        <div class="titles">
+          <div><h2> Best Selling ({{ category_name.name }} )</h2></div>
+          <div class="view-all"> </div>
+        </div>
+        <div class="new-arrivals" id="newarrival">
+          {% for item in products %}
+          
+          <div class="product">
+            <a href="{{ item.get_absolute_url }}">
+            <div>
+              <img src="{{ item.image.url }}" class="card-img-top">
+            </div>
+            <!-- Card details-->
+            <div class="card-detail">
+              <h4> {{ item.title }} <span > sale </span> </h4>
+              {% if item.discount_price %}
+              <p> <i class="bi bi-star"></i> &nbsp Kes  {{ item.discount_price }} </p>
+              <p class="discount"> Kes {{item.price}} </p>  
+              {% else  %}    
+              <p> <i class="bi bi-star"></i> &nbsp Kes {{item.price}} </p>
+              {% endif %}      
+            </div>
+          </a>
+          </div>
+       
+          {% endfor %}
+          
+        </div>
+
+        <div class="titles">
+          <div><h2> Popular ({{ category_name.name }} )</h2></div>
+          <div class="view-all"> </div>
         </div>
         <div class="new-arrivals" id="newarrival">
           {% for item in products %}
@@ -40,6 +102,7 @@
 
   </main>
 
+  {% include "footer.html" %}
   
   
 

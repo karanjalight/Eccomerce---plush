@@ -1,4 +1,6 @@
 from django.urls import path
+from django.contrib.auth import views as auth_views 
+
 from .views import (
     ItemDetailView,
     CheckoutView,
@@ -12,14 +14,20 @@ from .views import (
     RequestRefundView,
     IndexView,
     categoryview,
-    faqs
+    faqs,
+    register
 )
+
+
 
 app_name = 'core'
 
 urlpatterns = [
     path('', HomeView.as_view(), name='home'),
     path('home/', IndexView, name="index"),
+    path('signup', register, name="new"),
+    path('login/', auth_views.LoginView.as_view(), name='login'),
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('faqs/', faqs, name="categoryComponent"),
     path('category/<slug>', categoryview, name='categoryview'),
     path('checkout/', CheckoutView.as_view(), name='checkout'),

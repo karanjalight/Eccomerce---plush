@@ -2,7 +2,7 @@
 
 {% block content %}
   <main>
-    <div >
+    <div style="margin-top: "-10px">
       <!-- landing-page -->
       <div class="landing-page">
         <div class="overlayer">
@@ -31,7 +31,9 @@
       <div class="mb-4 new fadeIn" >
         <div class="titles">
           <div><h2> New Arrivals </h2></div>
+          <a href="/category/new">  
           <div class="view-all">View All > </div>
+        </a>
         </div>
         <div class="new-arrivals" id="newarrival">
           {% for item in object_list %}

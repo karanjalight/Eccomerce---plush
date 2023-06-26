@@ -18,6 +18,25 @@ from .models import Item, Category, OrderItem, Order, Address, Payment, Coupon, 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login, authenticate
+
+
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password1')
+            user = authenticate(username = username, password = password)
+            login(request, user)
+            return redirect('/')
+    else:
+        form = UserCreationForm()
+    return render(request, 'registration/register.html', {'form': form})
+
+
 def create_ref_code():
     return ''.join(random.choices(string.ascii_lowercase + string.digits, k=20))
 
@@ -241,6 +260,18 @@ class PaymentView(View):
         userprofile = UserProfile.objects.get(user=self.request.user)
         if form.is_valid():
             token = form.cleaned_data.get('stripeToken')
+            print("==================================")
+            order_items = order.items.all()
+            order_items.update(ordered=True)
+            for item in order_items:
+                    item.save()
+
+            order.ordered = True
+            # order.payment = payment
+            order.ref_code = create_ref_code()
+            order.save()
+            print(token)
+
             save = form.cleaned_data.get('save')
             use_default = form.cleaned_data.get('use_default')
 
@@ -326,7 +357,7 @@ class PaymentView(View):
             except stripe.error.APIConnectionError as e:
                 # Network communication with Stripe failed
                 messages.warning(self.request, "Network error")
-                return redirect("/")
+                return redirect("/category")
 
             except stripe.error.StripeError as e:
                 # Display a very generic error to the user, and maybe send

@@ -37,6 +37,25 @@
             <a class="nav-link waves-effect" href="/checkout">
             Checkout</a>
           </li>
+          {% if request.user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="{% url 'account_logout' %}">
+              Logout 
+            </a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="{% url 'account_login' %}">
+               Login 
+            </a>
+          </li>
+          <li class="nav-item Hide">
+            <a class="nav-link waves-effect" href="/signup">
+              Signup
+            </a>
+          </li>
+          {% endif %}
+
           
         </ul>
 
@@ -44,28 +63,36 @@
         <ul class="navbar-nav nav-flex-icons">
           {% if request.user.is_authenticated %}
           <li class="nav-item">
+            <a class="nav-link waves-effect" href="{% url 'account_logout' %}">
+              <span class="clearfix d-none d-sm-inline-block"> Hi </span>
+              {{request.user.username}}!
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="{% url 'core:order-summary' %}" class="nav-link waves-effect">
               <span class="badge purple z-depth-1 mr-1"> {{ request.user|cart_item_count }} </span>
               <i class="fas fa-shopping-cart"></i>
               <span class="clearfix d-none d-sm-inline-block"> Cart </span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link waves-effect" href="{% url 'account_logout' %}">
-              <span class="clearfix d-none d-sm-inline-block"> Logout </span>
-            </a>
-          </li>
+          
           {% else %}
           <li class="nav-item">
+            <a class="nav-link waves-effect" href="{% url 'account_logout' %}">
+              <span class="clearfix d-none d-sm-inline-block"> Welcome! </span>
+              
+            </a>
+          </li>
+          {% comment %} <li class="nav-item">
             <a class="nav-link waves-effect" href="{% url 'account_login' %}">
               <span class="clearfix d-none d-sm-inline-block"> Login </span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link waves-effect" href="{% url 'account_signup' %}">
+            <a class="nav-link waves-effect Hide" href="/signup">
               <span class="clearfix d-none d-sm-inline-block"> Signup </span>
             </a>
-          </li>
+          </li> {% endcomment %}
           {% endif %}
         </ul>
       </div>
