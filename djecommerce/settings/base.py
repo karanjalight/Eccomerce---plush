@@ -4,7 +4,7 @@ from decouple import config
 BASE_DIR = os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))))
 
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY =  '6xbl02=tz#ifg3k2-em68a66n_**s35y##b!(o^x1zn()kkf@j'
 
 INSTALLED_APPS = [
     'jazzmin',
