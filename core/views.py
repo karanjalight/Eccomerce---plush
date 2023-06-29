@@ -398,11 +398,15 @@ def categoryview(request, slug):
          print(slug)
          print('===================--------products list---------======================')
          products = Item.objects.filter(category__slug=slug)
+         popular = Item.objects.filter(popular=1)
+         best_selling = Item.objects.filter(best_selling=1)
          print(products)
          category_name = Category.objects.filter(slug=slug).first
          print(category_name)
          context= {
-            'products':products, 
+            'products':products,
+            'popular': popular, 
+            'best_selling': best_selling,
             'category_name':category_name
           }
          return render(request, 'category.html' , context)

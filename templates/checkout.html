@@ -90,7 +90,7 @@
                     <label for="billing_zip"> House Address required.</label>
                     <input type='text' placeholder='Zip code' id='billing_zip' name='billing_zip' class='form-control' />
                     <div class="invalid-feedback">
-                      House Address required.
+                      House Address/Location required.
                     </div>
                   </div>
 
@@ -127,7 +127,7 @@
                 {% for value, name in form.fields.payment_option.choices %}
                 <div class="custom-control custom-radio">
                   <input id="{{ name }}" name="payment_option" value="{{ value }}" type="radio" class="custom-control-input" required>
-                  <label class="custom-control-label" for="{{ name }}">{{ name }}</label>
+                  <label class="custom-control-label" for="{{ name }">Mpesa</label>
                 </div>
                 {% endfor %}
               </div> 
