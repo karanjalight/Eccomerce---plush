@@ -25,7 +25,7 @@ a {
   }
   .landing-page{
     height: 600px;
-      background-image: url('https://wallpapercave.com/wp/wp2004258.jpg');
+      background-image: url('https://images.pexels.com/photos/3379261/pexels-photo-3379261.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
       background-position: 1520px ;
       background-size: cover cover;
       background-position: center;    
@@ -54,7 +54,7 @@ a {
   }
   .headTitle button {
     width: 180px;
-    background-color: #974cc2;
+    background-color: rgb(253, 126,20,1);
     padding: 10px 20px 10px 20px;
     border: 0px solid navajowhite;
     border-radius: 6px;
@@ -64,8 +64,8 @@ a {
   }
   .headTitle button:hover {
     width: 180px;
-    background-color: #e97de9;
-    box-shadow: 2px 2px 2px 2px #e97de9;
+    background-color: #fd7e14;
+    box-shadow: 2px 2px 2px 2px #fd7e14;
     padding: 10px 20px 10px 20px;
     border: 0px solid navajowhite;
     border-radius: 6px;
@@ -83,14 +83,14 @@ a {
   }
   .titles .view-all{
     margin-top: 20px;
-    color: rgb(202, 19, 215);
+    color: rgb(253, 126,20,1);
     font-weight: 500;
     padding: 5px;
   }
 
   .titles .view-all:hover{
     margin-top: 20px;
-    background-color: rgb(224, 120, 232);
+    background-color: rgb(253, 126,20,1);
     color: #fff;
     font-weight: 500;
     padding: 5px;
@@ -167,7 +167,7 @@ a {
   .product .card-detail h4 span {
     font-size: 13px;
     padding: 5px;
-    background-color: #974cc2;
+    background-color: rgb(253, 126,20,1);
     color: #fff;
     border-radius: 12px;
     
@@ -209,7 +209,7 @@ a {
   .best-sell span{
     font-size: 13px;
     padding: 5px;
-    background-color: #974cc2;
+    background-color: rgb(253, 126,20,1);
     color: #fff;
     border-radius: 12px;
     letter-spacing: 3px;
@@ -231,7 +231,7 @@ a {
 
   .foot{
     height: 100px;
-    background-color: #974cc2;
+    background-color: rgb(253, 126,20,1);
   }
   
 
@@ -243,7 +243,7 @@ a {
   
   .landing-page{
     height: 600px;
-      background-image: url('https://wallpapercave.com/wp/wp2004258.jpg');
+      background-image: url('https://images.pexels.com/photos/3379261/pexels-photo-3379261.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
       background-position: 500px ;
       background-size: cover;
       background-position: center;
@@ -277,8 +277,8 @@ a {
     }  
     .headTitle button:hover {
       width: 180px;
-      background-color: #e97de9;
-      box-shadow: 2px 2px 2px 2px #e97de9;
+      background-color: #fd7e14;
+      box-shadow: 2px 2px 2px 2px #fd7e14;
       padding: 10px 20px 10px 20px;
       border: 0px solid navajowhite;
       border-radius: 6px;
@@ -293,7 +293,7 @@ a {
 @media (max-width: 776px) {
   .landing-page{
     height: 600px;
-      background-image: url('https://wallpapercave.com/wp/wp2004258.jpg');
+      background-image: url('https://images.pexels.com/photos/3379261/pexels-photo-3379261.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
       background-position: 500px ;
       background-size: cover;
   }
@@ -316,7 +316,7 @@ a {
     }
     .headTitle button {
       width: 180px;
-      background-color: #974cc2;
+      background-color: rgb(253, 126,20,1);
       padding: 10px 20px 10px 20px;
       border: 0px solid navajowhite;
       border-radius: 6px;
@@ -326,8 +326,8 @@ a {
     }  
     .headTitle button:hover {
       width: 180px;
-      background-color: #e97de9;
-      box-shadow: 2px 2px 2px 2px #e97de9;
+      background-color: #fd7e14;
+      box-shadow: 2px 2px 2px 2px #fd7e14;
       padding: 10px 20px 10px 20px;
       border: 0px solid navajowhite;
       border-radius: 6px;
@@ -355,7 +355,7 @@ a {
     }
     .titles .view-all{
       margin-top: 20px;
-      color: rgb(202, 19, 215);
+      color: rgb(253, 126,20,1);
       font-weight: 500;
     }
    
@@ -380,7 +380,7 @@ a {
     .category{
       display: flex;      
       gap: 0.1rem;      
-      background-image: url('https://wallpapercave.com/wp/wp2004258.jpg') ;
+      background-image: url('https://images.pexels.com/photos/3379261/pexels-photo-3379261.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') ;
       border-radius: 12px;
       padding: 10px;
       padding-left: 30px;
@@ -433,7 +433,7 @@ a {
     .product .card-detail h4 span {
       font-size: 13px;
       padding: 5px;
-      background-color: #974cc2;
+      background-color: rgb(253, 126,20,1);
       color: #fff;
       border-radius: 12px;
       
@@ -472,7 +472,7 @@ a {
     .best-sell span{
       font-size: 13px;
       padding: 5px;
-      background-color: #974cc2;
+      background-color: rgb(253, 126,20,1);
       color: #fff;
       border-radius: 12px;
       letter-spacing: 3px;
@@ -494,7 +494,7 @@ a {
 
     .foot{
       height: 100px;
-      background-color: #974cc2;
+      background-color: rgb(253, 126,20,1);
     }
     .faqs{
       padding: 500px;
@@ -505,7 +505,7 @@ a {
 
 /* Footer color for sake of consistency with Navbar */
 .page-footer {
-  background-color: #974cc2; }
+  background-color: rgb(253, 126,20,1); }
 
 
 
